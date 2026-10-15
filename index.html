@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+     <meta charset="utf-8" />
+     <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport" />
+     <title>Seven Hills Wai</title>
+     <link href="https://fonts.googleapis.com" rel="preconnect" />
+     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&amp;display=swap"
+          rel="stylesheet" />
+
+     <!-- GSAP & ScrollTrigger (loaded once, used by the video intro, Amenities and Legal sections) -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+     <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+     <!-- =====================================================================
+     0) SCROLL-SCRUBBED VIDEO INTRO
+     ===================================================================== -->
+     <div class="s0">
+          <div id="scroll-track">
+               <div id="video-viewport">
+                    <video id="scrub-video" muted="" playsinline="" preload="auto" tabindex="-1" webkit-playsinline="">
+                         <!-- ✅ VIDEO LINK: Replace with your local video file or a hosted URL -->
+                         <source src="./assets/Video.mp4" type="video/mp4" />
+                         Your browser does not support HTML5 video.
+                    </video>
+                    <!-- Optional hidden upload trigger for previewing your exact drone video (remove before going live) -->
+                    <div id="upload-container">
+                         <input accept="video/mp4,video/webm,video/quicktime" id="custom-file-input"
+                              style="display:none;" type="file" />
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <!-- =====================================================================
+     1) PROJECT OVERVIEW
+     ===================================================================== -->
+     <div class="s1">
+          <section class="sh-overview">
+               <div class="sh-ov-left">
+                    <div class="sh-eyebrow">Seven Hills Wai</div>
+                    <h2 class="sh-title">Project <span>Overview</span></h2>
+                    <p class="sh-sub">A well-planned hill community designed for a better lifestyle</p>
+                    <div class="sh-grid">
+                         <div class="sh-card">
+                              <div class="sh-ico"><svg viewbox="0 0 24 24">
+                                        <path d="M12 3 3 8l9 5 9-5-9-5Z"></path>
+                                        <path d="m3 13 9 5 9-5"></path>
+                                   </svg></div>
+                              <div>
+                                   <h3>Step Plotting</h3>
+                                   <p>Optimised for<br />natural terrain</p>
+                              </div>
+                         </div>
+                         <div class="sh-card">
+                              <div class="sh-ico"><svg viewbox="0 0 24 24">
+                                        <path d="M12 3 4.5 6v5.5c0 4.5 3.2 8 7.5 9.5 4.3-1.5 7.5-5 7.5-9.5V6L12 3Z">
+                                        </path>
+                                        <path d="m9 12 2 2 4-4"></path>
+                                   </svg></div>
+                              <div>
+                                   <h3>Secured Campus</h3>
+                                   <p>Safe and peaceful<br />environment</p>
+                              </div>
+                         </div>
+                         <div class="sh-card">
+                              <div class="sh-ico"><svg viewbox="0 0 24 24">
+                                        <rect height="14" rx="2" width="17" x="3.5" y="5"></rect>
+                                        <path d="M3.5 10h17M3.5 14.5h17M9.2 5v14M14.8 5v14"></path>
+                                   </svg></div>
+                              <div>
+                                   <h3>Gated Community</h3>
+                                   <p>Controlled access<br />for complete privacy</p>
+                              </div>
+                         </div>
+                         <div class="sh-card">
+                              <div class="sh-ico"><svg viewbox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="9"></circle>
+                                        <path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"></path>
+                                   </svg></div>
+                              <div>
+                                   <h3>Vastu Planned</h3>
+                                   <p>In harmony with<br />positive energy</p>
+                              </div>
+                         </div>
+                         <div class="sh-card">
+                              <div class="sh-ico"><svg viewbox="0 0 24 24">
+                                        <path d="M6 21V4.5A1.5 1.5 0 0 1 7.5 3h8A1.5 1.5 0 0 1 17 4.5V21"></path>
+                                        <path d="M4 21h14"></path>
+                                        <path d="M13 12h1"></path>
+                                        <path d="M17 9h4m0 0-1.5-1.5M21 9l-1.5 1.5"></path>
+                                   </svg></div>
+                              <div>
+                                   <h3>Single Entry / Single Exit</h3>
+                                   <p>Enhanced security<br />and convenience</p>
+                              </div>
+                         </div>
+                         <div class="sh-card">
+                              <div class="sh-ico"><svg viewbox="0 0 24 24">
+                                        <path d="M12 3 3 8l9 5 9-5-9-5Z"></path>
+                                        <path d="m3 12.5 9 5 9-5"></path>
+                                        <path d="m3 17 9 5 9-5"></path>
+                                   </svg></div>
+                              <div>
+                                   <h3>FSI - 1.5</h3>
+                                   <p>Flexible construction<br />possibilities</p>
+                              </div>
+                         </div>
+                         <div class="sh-card sh-full">
+                              <div class="sh-ico"><svg viewbox="0 0 24 24">
+                                        <path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"></path>
+                                        <path d="M5 19c3-4 6-7 10-9"></path>
+                                   </svg></div>
+                              <div>
+                                   <h3>Best AQI</h3>
+                                   <p>Clean and fresh air environment</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- ✅ IMAGE SLOT 1: Project Overview photo -->
+               <!-- To use a photo: add style="--sh-img:url('YOUR-IMAGE.jpg')" on this div -->
+               <div class="sh-ov-right">
+                    <img src="https://via.placeholder.com/700x900/8a9a78/ffffff?text=Project+Overview"
+                         alt="Nature">
+               </div>
+          </section>
+     </div>
+     <!-- =====================================================================
+     2) NATURE ATTRACTIONS (scroll-driven carousel)
+     ===================================================================== -->
+     <div class="s2">
+          <div class="scrollwrap" id="nWrap">
+               <section class="pin">
+                    <div class="top">
+                         <div>
+                              <span class="pill">Seven Hills Wai</span>
+                              <h2>Nature<br /><em>Attraction</em></h2>
+                         </div>
+                         <p class="desc">Surrounded by greenery and scenic natural surroundings, offering a refreshing
+                              and peaceful living environment.</p>
+                    </div>
+                    <div class="bottom">
+                         <div class="info">
+                              <div class="left-meta">
+                                   <div class="count">
+                                        <div class="cur" id="nCur">
+                                             <div id="nCurInner">
+                                                  <span>01</span><span>02</span><span>03</span><span>04</span>
+                                             </div>
+                                        </div>
+                                        <span class="tot">/04</span>
+                                   </div>
+                                   <p class="cap" id="nCap"></p>
+                                   <div class="bar"><i id="nBar"></i></div>
+                              </div>
+                              <div class="ctrl">
+                                   <button aria-label="Previous" class="nbtn" id="nPrev"><svg viewbox="0 0 24 24">
+                                             <path d="M19 12H5M11 6l-6 6 6 6"></path>
+                                        </svg></button>
+                                   <button aria-label="Next" class="nbtn dark" id="nNext"><svg viewbox="0 0 24 24">
+                                             <path d="M5 12h14M13 6l6 6-6 6"></path>
+                                        </svg></button>
+                                   <span class="hint">Scroll</span>
+                              </div>
+                         </div>
+                         <div class="viewport">
+                              <!-- ✅ IMAGE SLOTS 2-5: replace each url('...') with your own image link -->
+                              <div class="track" id="nTrack">
+                                   <article class="card c1"
+                                        style="--img:url('https://via.placeholder.com/900x1200/7f9490/ffffff?text=7+Hills')">
+                                        <div class="bg"></div><span class="tag">Landscape</span>
+                                        <div class="txt">
+                                             <h3>7 Natural<br />Hills</h3>
+                                             <p>Seven hills wrap the community with open skies and cool breezes.</p>
+                                        </div>
+                                   </article>
+                                   <article class="card c2"
+                                        style="--img:url('https://via.placeholder.com/900x1200/6fa8c4/ffffff?text=Lake')">
+                                        <div class="bg"></div><span class="tag">Waterfront</span>
+                                        <div class="txt">
+                                             <h3>Lake</h3>
+                                             <p>A calm lake nearby for morning walks and quiet evenings.</p>
+                                        </div>
+                                   </article>
+                                   <article class="card c3"
+                                        style="--img:url('https://via.placeholder.com/900x1200/5f7a43/ffffff?text=Geography')">
+                                        <div class="bg"></div><span class="tag">Terrain</span>
+                                        <div class="txt">
+                                             <h3>Living<br />Geography</h3>
+                                             <p>Valleys and green terrain that feel alive in every season.</p>
+                                        </div>
+                                   </article>
+                                   <article class="card c4"
+                                        style="--img:url('https://via.placeholder.com/900x1200/8e9a80/ffffff?text=Pandavgad+Fort')">
+                                        <div class="bg"></div><span class="tag">Heritage</span>
+                                        <div class="txt">
+                                             <h3>Pandavgad<br />Fort</h3>
+                                             <p>A historic hill fort close by, with weekend trails.</p>
+                                        </div>
+                                   </article>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+          </div>
+     </div>
+     <!-- =====================================================================
+     3) LOCATION (satellite map)
+     ===================================================================== -->
+     <div class="s3">
+          <section class="loc3" id="loc">
+               <div id="lbg"></div>
+               <div id="stage">
+                    <!-- ✅ IMAGE SLOT 6: Satellite map image -->
+                    <img alt="Satellite map of western Maharashtra with the route from Mumbai and Pune to Seven Hills, Wai"
+                         draggable="false" height="941" id="mapimg" width="1672"
+                         src="https://via.placeholder.com/1672x941/1b2a1f/ffffff?text=Satellite+Map" />
+                    <div id="vignette"></div>
+                    <svg aria-hidden="true" id="lines" xmlns="http://www.w3.org/2000/svg"></svg>
+                    <div id="markers"></div>
+               </div>
+               <div id="linfo">
+                    <h3>From Seven Hills, Wai</h3>
+                    <div class="sub">Distance &amp; travel time by road</div>
+                    <div class="head"><span>Destination</span><span>Distance</span><span>Time</span></div>
+                    <div class="row" data-i="0"></div>
+                    <div class="row" data-i="1"></div>
+                    <div class="row" data-i="2"></div>
+                    <div class="row" data-i="3"></div>
+                    <div class="note">* Satara time is an estimate</div>
+               </div>
+          </section>
+     </div>
+     <!-- =====================================================================
+     4) AMENITIES
+     ===================================================================== -->
+     <div class="s4">
+          <section class="amen" id="amen">
+               <div class="bg" id="bg"></div>
+               <div class="panel" id="panel">
+                    <div class="head">
+                         <span class="chip">Seven Hills Wai</span>
+                         <h2>
+                              <span class="ln"><span>Amenities for</span></span>
+                              <span class="ln"><span>Modern Living</span></span>
+                         </h2>
+                    </div>
+                    <p class="descr">Thoughtfully designed amenities offering residents comfort, recreation, fitness,
+                         and a modern lifestyle.</p>
+                    <div class="ctrl">
+                         <div class="cn">
+                              <div aria-live="polite" class="count">
+                                   <span class="cur"><span id="curNum">01</span></span><span class="tot"
+                                        id="totNum">/04</span>
+                              </div>
+                              <p class="note" id="note"></p>
+                         </div>
+                         <div class="btns">
+                              <button aria-label="Previous amenity" class="btn prev" id="prev"><svg viewbox="0 0 24 24">
+                                        <path d="M19 12H5M11 6l-6 6 6 6"></path>
+                                   </svg></button>
+                              <button aria-label="Next amenity" class="btn next" id="next"><svg viewbox="0 0 24 24">
+                                        <path d="M5 12h14M13 6l6 6-6 6"></path>
+                                   </svg></button>
+                         </div>
+                    </div>
+                    <div class="vp" id="vp">
+                         <div aria-label="Amenities slider" class="slider" id="slider" tabindex="0">
+                              <!-- ✅ ALL AMENITY CARDS NOW HAVE IMAGE LINKS (replace the placeholder URLs with your own) -->
+                              <div class="track" id="track">
+                                   <article class="card" data-note="Evenings above the hills, with 360° views."
+                                        style="--img:url('https://via.placeholder.com/900x1200/8e9a80/ffffff?text=Rooftop+Resto+Bar')">
+                                        <div class="img"></div><span class="tag">Dining</span>
+                                        <div class="txt">
+                                             <h3>360° Rooftop<br />Resto Bar</h3>
+                                             <p>Sunset dining and sky-high evenings above the hills.</p>
+                                        </div>
+                                   </article>
+                                   <article class="card" data-note="Fitness with a view of the valley."
+                                        style="--img:url('https://via.placeholder.com/900x1200/5f7a43/ffffff?text=Hill-view+Gym')">
+                                        <div class="img"></div><span class="tag">Fitness</span>
+                                        <div class="txt">
+                                             <h3>Hill-view<br />Gym</h3>
+                                             <p>Train with open valley views and modern equipment.</p>
+                                        </div>
+                                   </article>
+                                   <article class="card" data-note="Recreation in the calm of nature."
+                                        style="--img:url('https://via.placeholder.com/900x1200/6a8c47/ffffff?text=Horse+Riding+Arena')">
+                                        <div class="img"></div><span class="tag">Recreation</span>
+                                        <div class="txt">
+                                             <h3>Horse Riding<br />Arena</h3>
+                                             <p>A dedicated arena for riding in the calm of nature.</p>
+                                        </div>
+                                   </article>
+                                   <article class="card" data-note="Wellness, laps and long weekends."
+                                        style="--img:url('https://via.placeholder.com/900x1200/6fa8c4/ffffff?text=Swimming+Pool')">
+                                        <div class="img"></div><span class="tag">Wellness</span>
+                                        <div class="txt">
+                                             <h3>Athlete<br />Swimming Pool</h3>
+                                             <p>A full-length pool made for laps and long weekends.</p>
+                                        </div>
+                                   </article>
+                                   <article class="card" data-note="More lifestyle amenities to explore."
+                                        style="--img:url('https://via.placeholder.com/900x1200/4d6a37/ffffff?text=25%2B+More+Amenities')">
+                                        <div class="img"></div><span class="tag">And more</span>
+                                        <div class="txt">
+                                             <h3>25+ More<br />Amenities</h3>
+                                             <p>Explore the complete list of lifestyle amenities.</p>
+                                        </div>
+                                   </article>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="hint" id="hint">Scroll</div>
+          </section>
+     </div>
+     <!-- =====================================================================
+     5) LEGAL & SECURITY
+     ===================================================================== -->
+     <div class="s5">
+          <section class="legal" id="legal">
+               <div class="legal-grid">
+                    <div>
+                         <div aria-hidden="true" class="badge">
+                              <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                   viewbox="0 0 24 24">
+                                   <path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3z"></path>
+                                   <path d="M9 12l2 2 4-4"></path>
+                              </svg>
+                         </div>
+                         <h2>Legal &amp;<br />Security</h2>
+                         <div class="divider"></div>
+                         <p class="lead">Developed with clear legal documentation, secure premises, and reliable safety
+                              features for complete peace of mind.</p>
+                         <a class="btn" href="#documents">View Documents</a>
+                    </div>
+                    <div>
+                         <div class="eyebrow">WHAT WE OFFER</div>
+                         <ul class="offer-list" id="offerList">
+                              <li class="offer">
+                                   <span class="icon"><svg fill="none" stroke-linecap="round" stroke-linejoin="round"
+                                             stroke-width="1.7" viewbox="0 0 24 24">
+                                             <path d="M7 3h7l4 4v14H7z"></path>
+                                             <path d="M14 3v4h4M10 12h5M10 16h5"></path>
+                                        </svg></span>
+                                   <div>
+                                        <h3>7/12</h3>
+                                        <p>Clear 7/12 land records for transparent ownership.</p>
+                                   </div>
+                              </li>
+                              <li class="offer active">
+                                   <span class="icon"><svg fill="none" stroke-linecap="round" stroke-linejoin="round"
+                                             stroke-width="1.7" viewbox="0 0 24 24">
+                                             <path d="M3 9l9-5 9 5M5 10v8M9 10v8M15 10v8M19 10v8M3 20h18"></path>
+                                        </svg></span>
+                                   <div>
+                                        <h3>Bank Approval</h3>
+                                        <p>Bank-approved property for added financial confidence.</p>
+                                   </div>
+                              </li>
+                              <li class="offer">
+                                   <span class="icon"><svg fill="none" stroke-linecap="round" stroke-linejoin="round"
+                                             stroke-width="1.7" viewbox="0 0 24 24">
+                                             <path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"></path>
+                                             <path d="M9 4v14M15 6v14"></path>
+                                        </svg></span>
+                                   <div>
+                                        <h3>NA Plots</h3>
+                                        <p>Legally approved NA plots, ready for your dream home.</p>
+                                   </div>
+                              </li>
+                              <li class="offer">
+                                   <span class="icon"><svg fill="none" stroke-linecap="round" stroke-linejoin="round"
+                                             stroke-width="1.7" viewbox="0 0 24 24">
+                                             <path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3z"></path>
+                                             <path d="M9 12l2 2 4-4"></path>
+                                        </svg></span>
+                                   <div>
+                                        <h3>RERA Registered - P52700011037</h3>
+                                        <p>RERA registered for secure and transparent investment.</p>
+                                   </div>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+          </section>
+     </div>
+     <!-- =====================================================================
+     6) OTHER NA PROJECTS (comparison)
+     ===================================================================== -->
+     <div class="s6">
+          <section class="comparison-section">
+               <header class="heading">
+                    <div class="brand">SEVEN HILLS</div>
+                    <h1>Other <span>NA Projects</span></h1>
+                    <p class="subtitle">See how Sevenhills stands apart from other NA projects in the region.</p>
+               </header>
+               <div aria-label="Comparison of NA projects" class="comparison">
+                    <div class="features">
+                         <div class="feature">
+                              <span class="feature-icon"><svg viewbox="0 0 24 24">
+                                        <path d="M7 3h8l4 4v14H7zM15 3v5h4M10 12h6M10 16h6"></path>
+                                   </svg></span>
+                              <span class="feature-label">RERA</span>
+                         </div>
+                         <div class="feature">
+                              <span class="feature-icon"><svg viewbox="0 0 24 24">
+                                        <path d="M12 3 20 6v6c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V6z"></path>
+                                   </svg></span>
+                              <span class="feature-label">NA</span>
+                         </div>
+                         <div class="feature">
+                              <span class="feature-icon"><svg viewbox="0 0 24 24">
+                                        <path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5M8 16l8-8"></path>
+                                   </svg></span>
+                              <span class="feature-label">Acres</span>
+                         </div>
+                         <div class="feature">
+                              <span class="feature-icon"><svg viewbox="0 0 24 24">
+                                        <path d="M4 21V8l8-5 8 5v13M8 21v-6h8v6M8 10h2M14 10h2M11 12v-2M13 12v-2">
+                                        </path>
+                                   </svg></span>
+                              <span class="feature-label">Amenities</span>
+                         </div>
+                         <div class="feature">
+                              <span class="feature-icon"><svg viewbox="0 0 24 24">
+                                        <path d="m12 3 9 5-9 5-9-5zM3 12l9 5 9-5M3 16l9 5 9-5"></path>
+                                   </svg></span>
+                              <span class="feature-label">FSI</span>
+                         </div>
+                    </div>
+                    <article class="project-card featured" style="--delay:80ms">
+                         <div class="project-name">SEVENHILLS</div>
+                         <div class="values">
+                              <div aria-label="RERA approved" class="value yes"><svg viewbox="0 0 24 24">
+                                        <path d="m5 12 4 4L19 6"></path>
+                                   </svg></div>
+                              <div aria-label="NA approved" class="value yes"><svg viewbox="0 0 24 24">
+                                        <path d="m5 12 4 4L19 6"></path>
+                                   </svg></div>
+                              <div class="value numeric">40</div>
+                              <div class="value numeric">30+</div>
+                              <div class="value numeric">1.5</div>
+                         </div>
+                    </article>
+                    <article class="project-card" style="--delay:180ms">
+                         <div class="project-name">VANAHA</div>
+                         <div class="values">
+                              <div aria-label="Not RERA approved" class="value no"><svg viewbox="0 0 24 24">
+                                        <path d="m7 7 10 10M17 7 7 17"></path>
+                                   </svg></div>
+                              <div aria-label="NA approved" class="value yes"><svg viewbox="0 0 24 24">
+                                        <path d="m5 12 4 4L19 6"></path>
+                                   </svg></div>
+                              <div class="value numeric">10</div>
+                              <div class="value numeric">21+</div>
+                              <div class="value numeric">1.3</div>
+                         </div>
+                    </article>
+                    <article class="project-card" style="--delay:280ms">
+                         <div class="project-name">NIVAANT</div>
+                         <div class="values">
+                              <div aria-label="Not RERA approved" class="value no"><svg viewbox="0 0 24 24">
+                                        <path d="m7 7 10 10M17 7 7 17"></path>
+                                   </svg></div>
+                              <div aria-label="NA approved" class="value yes"><svg viewbox="0 0 24 24">
+                                        <path d="m5 12 4 4L19 6"></path>
+                                   </svg></div>
+                              <div class="value numeric">12</div>
+                              <div class="value numeric">15+</div>
+                              <div class="value numeric">1.2</div>
+                         </div>
+                    </article>
+               </div>
+          </section>
+     </div>
+     <!-- =====================================================================
+     7) BANKING TIE-UPS
+     ===================================================================== -->
+     <div class="s7">
+          <div class="bk">
+               <header class="bk-hero">
+                    <div class="bk-copy reveal">
+                         <div class="bk-eyebrow">Seven Hills</div>
+                         <h1><strong>Banking</strong> Tie-Ups</h1>
+                         <p class="bk-sub">Home loan support from trusted banks and financial institutions</p>
+                         <div class="bk-feats">
+                              <div class="bk-feat"><i><svg viewbox="0 0 24 24">
+                                             <path
+                                                  d="M12 3 4.5 6v5.5c0 4.5 3.2 8 7.5 9.5 4.3-1.5 7.5-5 7.5-9.5V6L12 3Z">
+                                             </path>
+                                             <path d="m9 12 2 2 4-4"></path>
+                                        </svg></i><span>Trusted<br />Partners</span></div>
+                              <div class="bk-feat"><i><svg viewbox="0 0 24 24">
+                                             <path d="M19 5 5 19"></path>
+                                             <circle cx="7" cy="7" r="2.2"></circle>
+                                             <circle cx="17" cy="17" r="2.2"></circle>
+                                        </svg></i><span>Competitive<br />Interest Rates</span></div>
+                              <div class="bk-feat"><i><svg viewbox="0 0 24 24">
+                                             <path d="M7 3h7l4 4v14H7z"></path>
+                                             <path d="M14 3v4h4M10 12h5M10 16h5"></path>
+                                        </svg></i><span>Hassle-Free<br />Loan Process</span></div>
+                         </div>
+                    </div>
+                    <!-- ✅ IMAGE SLOT 12: Banking section photo (replaces the illustration behind the glass card) -->
+                    <div class="bk-visual reveal" style="--delay:120ms; --bk-photo:url('https://via.placeholder.com/640x440/e3ecd0/4d6a37?text=Your+Dream+Home')">
+                         <svg aria-hidden="true" class="scene" preserveaspectratio="xMidYMax slice"
+                              viewbox="0 0 640 440">
+                              <defs>
+                                   <lineargradient id="bkSky" x1="0" x2="0" y1="0" y2="1">
+                                        <stop offset="0" stop-color="#f6f8ea"></stop>
+                                        <stop offset="1" stop-color="#e3ecd0"></stop>
+                                   </lineargradient>
+                                   <lineargradient id="bkH1" x1="0" x2="0" y1="0" y2="1">
+                                        <stop offset="0" stop-color="#d9e3c4"></stop>
+                                        <stop offset="1" stop-color="#cbd9b1"></stop>
+                                   </lineargradient>
+                                   <lineargradient id="bkH2" x1="0" x2="0" y1="0" y2="1">
+                                        <stop offset="0" stop-color="#aebf8c"></stop>
+                                        <stop offset="1" stop-color="#93a874"></stop>
+                                   </lineargradient>
+                                   <lineargradient id="bkH3" x1="0" x2="0" y1="0" y2="1">
+                                        <stop offset="0" stop-color="#6f8a4c"></stop>
+                                        <stop offset="1" stop-color="#4d6a37"></stop>
+                                   </lineargradient>
+                                   <lineargradient id="bkWall" x1="0" x2="0" y1="0" y2="1">
+                                        <stop offset="0" stop-color="#ece5d6"></stop>
+                                        <stop offset="1" stop-color="#d9d0bc"></stop>
+                                   </lineargradient>
+                                   <lineargradient id="bkGlass" x1="0" x2="1" y1="0" y2="1">
+                                        <stop offset="0" stop-color="#cfe3ea"></stop>
+                                        <stop offset="1" stop-color="#8fb0bd"></stop>
+                                   </lineargradient>
+                              </defs>
+                              <rect fill="url(#bkSky)" height="440" width="640"></rect>
+                              <circle cx="470" cy="92" fill="#fff" opacity=".55" r="46"></circle>
+                              <path d="M0 250 C70 214 120 206 186 232 S300 250 360 214 S500 176 640 226 V440 H0Z"
+                                   fill="url(#bkH1)"></path>
+                              <path d="M0 292 C80 250 150 262 230 284 S380 300 450 262 S580 236 640 270 V440 H0Z"
+                                   fill="url(#bkH2)"></path>
+                              <path d="M0 344 C90 312 170 322 260 340 S420 360 520 322 S600 312 640 326 V440 H0Z"
+                                   fill="url(#bkH3)"></path>
+                              <!-- trees, left -->
+                              <g fill="#4a6a35">
+                                   <circle cx="70" cy="318" r="24"></circle>
+                                   <circle cx="96" cy="326" r="19"></circle>
+                                   <circle cx="50" cy="334" r="18"></circle>
+                              </g>
+                              <g fill="#3d5b2c">
+                                   <path d="M150 342 168 296 186 342Z"></path>
+                                   <path d="M158 326 168 288 178 326Z" opacity=".7"></path>
+                              </g>
+                              <!-- house -->
+                              <g>
+                                   <ellipse cx="470" cy="346" fill="#2f4524" opacity=".28" rx="150" ry="14"></ellipse>
+                                   <rect fill="url(#bkWall)" height="86" width="244" x="352" y="262"></rect>
+                                   <rect fill="#e6dfce" height="52" width="172" x="388" y="214"></rect>
+                                   <rect fill="#3a3d36" height="9" rx="2" width="268" x="340" y="254"></rect>
+                                   <rect fill="#3a3d36" height="9" rx="2" width="196" x="376" y="206"></rect>
+                                   <rect fill="url(#bkGlass)" height="30" width="120" x="404" y="226"></rect>
+                                   <path d="M444 226v30M484 226v30" stroke="#f4f4ee" stroke-width="2"></path>
+                                   <rect fill="url(#bkGlass)" height="62" width="86" x="366" y="276"></rect>
+                                   <path d="M394 276v62M424 276v62" stroke="#f4f4ee" stroke-width="2"></path>
+                                   <rect fill="#a98a63" height="72" width="104" x="470" y="276"></rect>
+                                   <path d="M470 292h104M470 308h104M470 324h104" stroke="#8f7350" stroke-width="1.5">
+                                   </path>
+                                   <rect fill="#3a3d36" height="60" width="26" x="536" y="288"></rect>
+                                   <path d="M388 214h172" stroke="#fff" stroke-opacity=".5"></path>
+                              </g>
+                              <!-- trees, right -->
+                              <g fill="#587a3b">
+                                   <circle cx="338" cy="320" r="26"></circle>
+                                   <circle cx="318" cy="334" r="18"></circle>
+                              </g>
+                              <g fill="#3d5b2c">
+                                   <path d="M606 346 624 292 642 346Z"></path>
+                                   <path d="M590 346 604 304 618 346Z" opacity=".85"></path>
+                              </g>
+                              <g fill="#6a8c47">
+                                   <circle cx="560" cy="352" r="22"></circle>
+                                   <circle cx="520" cy="360" r="17"></circle>
+                                   <circle cx="420" cy="360" r="16"></circle>
+                                   <circle cx="380" cy="358" r="20"></circle>
+                              </g>
+                              <path d="M0 392 C120 372 220 386 330 380 S540 364 640 384 V440 H0Z" fill="#e8efd6"></path>
+                              <path d="M0 414 C140 398 260 410 380 404 S560 396 640 410 V440 H0Z" fill="#f1f5e3"></path>
+                         </svg>
+                         <div class="bk-glass">
+                              <div class="k">Your Dream Home</div>
+                              <h3>Easier to Own</h3>
+                              <p>Simple loan options with trusted financial partners.</p>
+                         </div>
+                    </div>
+               </header>
+               <section aria-label="Banking partners" class="bk-grid">
+                    <article class="bk-card reveal" style="--delay:80ms">
+                         <div class="bk-head">
+                              <div class="ic"><svg viewbox="0 0 32 32">
+                                        <path
+                                             d="M4 12 16 5l12 7M6 13h20M8 13v11M13 13v11M19 13v11M24 13v11M5 25h22M3 28h26">
+                                        </path>
+                                   </svg></div>
+                              <div class="tt"><small>National / Private</small>
+                                   <h2>Banks</h2>
+                              </div>
+                              <p class="note">Get home loan support from leading banks across India.</p>
+                         </div>
+                         <div class="bk-list">
+                              <!-- ✅ BANK LOGO IMAGES: Each bank now has an image link. Replace the src with your own logo URLs. -->
+                              <a aria-label="IDBI Bank" class="bk-row" href="#">
+                                   <span class="bk-logo"><img src="https://via.placeholder.com/80x40/ffffff/1b2a1f?text=IDBI" alt="IDBI Bank" style="height:24px;width:auto;" /></span>
+                                   <span class="bk-txt"><b>IDBI Bank</b><span>Industrial Development Bank of India</span></span>
+                                   <span class="go">›</span>
+                              </a>
+                              <a aria-label="State Bank of India" class="bk-row" href="#">
+                                   <span class="bk-logo"><img src="https://via.placeholder.com/80x40/ffffff/1b2a1f?text=SBI" alt="SBI" style="height:24px;width:auto;" /></span>
+                                   <span class="bk-txt"><b>SBI</b><span>State Bank of India</span></span>
+                                   <span class="go">›</span>
+                              </a>
+                              <a aria-label="HDFC Bank" class="bk-row" href="#">
+                                   <span class="bk-logo"><img src="https://via.placeholder.com/80x40/ffffff/1b2a1f?text=HDFC" alt="HDFC Bank" style="height:24px;width:auto;" /></span>
+                                   <span class="bk-txt"><b>HDFC Bank</b><span>Housing Development Finance Corp.</span></span>
+                                   <span class="go">›</span>
+                              </a>
+                              <a aria-label="Punjab National Bank" class="bk-row" href="#">
+                                   <span class="bk-logo"><img src="https://via.placeholder.com/80x40/ffffff/1b2a1f?text=PNB" alt="Punjab National Bank" style="height:24px;width:auto;" /></span>
+                                   <span class="bk-txt"><b>Punjab National Bank</b><span>Punjab National Bank</span></span>
+                                   <span class="go">›</span>
+                              </a>
+                         </div>
+                    </article>
+                    <article class="bk-card reveal" style="--delay:180ms">
+                         <div class="bk-head">
+                              <div class="ic"><svg viewbox="0 0 24 24">
+                                        <circle cx="8" cy="8" r="2.6"></circle>
+                                        <circle cx="16.5" cy="9" r="2.2"></circle>
+                                        <path
+                                             d="M3.5 19c0-3 2-5 4.5-5s4.5 2 4.5 5M13.5 19c0-2.4 1.4-4 3.2-4s3.8 1.6 3.8 4">
+                                        </path>
+                                   </svg></div>
+                              <div class="tt"><small>NBFC / Credit</small>
+                                   <h2>Societies</h2>
+                              </div>
+                              <p class="note">Flexible home loan options from trusted societies.</p>
+                         </div>
+                         <div class="bk-list societies">
+                              <!-- ✅ SOCIETY LOGO IMAGES: Replace with your own logos if desired. Currently using SVG icons. -->
+                              <a aria-label="Jankalyan" class="bk-row" href="#">
+                                   <span class="bk-logo"><img src="https://via.placeholder.com/80x40/ffffff/1b2a1f?text=Jankalyan" alt="Jankalyan" style="height:24px;width:auto;" /></span>
+                                   <span class="bk-txt"><b>Jankalyan</b><span>Nagari Sahakari Patsanstha Maryadit Karad</span></span>
+                                   <span class="go">›</span>
+                              </a>
+                              <a aria-label="Utkarsha" class="bk-row" href="#">
+                                   <span class="bk-logo"><img src="https://via.placeholder.com/80x40/ffffff/1b2a1f?text=Utkarsha" alt="Utkarsha" style="height:24px;width:auto;" /></span>
+                                   <span class="bk-txt"><b>Utkarsha</b><span>Nagari Sahakari Patsanstha Maryadit Wai</span></span>
+                                   <span class="go">›</span>
+                              </a>
+                              <a aria-label="Motilal Housing" class="bk-row" href="#">
+                                   <span class="bk-logo"><img src="https://via.placeholder.com/80x40/ffffff/1b2a1f?text=Motilal" alt="Motilal Housing" style="height:24px;width:auto;" /></span>
+                                   <span class="bk-txt"><b>Motilal Housing</b><span>Motilal Oswal Home Finance Limited (MOHFL)</span></span>
+                                   <span class="go">›</span>
+                              </a>
+                         </div>
+                    </article>
+               </section>
+               <div class="bk-foot reveal"><span>Financing made simpler<i></i>Your home, your next chapter</span></div>
+          </div>
+     </div>
+     <!-- =====================================================================
+     8) INVESTMENT OPTIONS (pricing)
+     ===================================================================== -->
+     <div class="s8">
+          <section class="iv-pricing" id="pricing">
+               <div class="iv-head">
+                    <div class="iv-eyebrow">PRICING</div>
+                    <h2>Investment <span>Options</span></h2>
+                    <p>Attractive and competitive pricing with flexible options designed to deliver strong value and
+                         long-term investment potential.</p>
+               </div>
+               <div class="iv-grid">
+                    <article class="iv-card">
+                         <div class="iv-thumb">
+                              <svg aria-hidden="true" preserveaspectratio="xMidYMid slice" viewbox="0 0 300 130">
+                                   <defs>
+                                        <lineargradient id="ivg1" x1="0" x2="0" y1="0" y2="1">
+                                             <stop offset="0" stop-color="#f6c98a"></stop>
+                                             <stop offset="1" stop-color="#e8dcc0"></stop>
+                                        </lineargradient>
+                                   </defs>
+                                   <rect fill="url(#ivg1)" height="130" width="300"></rect>
+                                   <circle cx="215" cy="52" fill="#fff3d0" opacity=".9" r="16"></circle>
+                                   <path d="M0 80 L60 50 L110 72 L170 40 L240 70 L300 52 V130 H0Z" fill="#8a9a78">
+                                   </path>
+                                   <path d="M0 98 L70 74 L140 92 L210 70 L300 92 V130 H0Z" fill="#5f7a43"></path>
+                                   <path d="M0 112 Q80 96 160 110 T300 104 V130 H0Z" fill="#3f5a2a"></path>
+                              </svg>
+                              <span class="iv-badge"><svg viewbox="0 0 24 24">
+                                        <path
+                                             d="M17 8C8 10 5.9 16.2 3.8 21.3L5.7 22c.7-1.6 1.4-3 2.4-4.2 5.4 1.8 11.9-1.3 12.9-13.8-1.3.5-2.8 1.5-4 4z">
+                                        </path>
+                                   </svg>1625 SQ.FT</span>
+                         </div>
+                         <h3>1625 SQ.FT</h3>
+                         <p class="iv-tag">Perfect to begin<br />your legacy</p>
+                         <div class="iv-price-row">
+                              <div><small>Starting Price</small><strong>₹28 Lakhs*</strong></div>
+                              <button aria-label="View 1625 sq.ft details" class="iv-go"><svg fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2.2" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M13 6l6 6-6 6"></path>
+                                   </svg></button>
+                         </div>
+                    </article>
+                    <article class="iv-card">
+                         <div class="iv-thumb">
+                              <svg aria-hidden="true" preserveaspectratio="xMidYMid slice" viewbox="0 0 300 130">
+                                   <defs>
+                                        <lineargradient id="ivg2" x1="0" x2="0" y1="0" y2="1">
+                                             <stop offset="0" stop-color="#f3b96f"></stop>
+                                             <stop offset="1" stop-color="#e9d9b5"></stop>
+                                        </lineargradient>
+                                   </defs>
+                                   <rect fill="url(#ivg2)" height="130" width="300"></rect>
+                                   <circle cx="110" cy="62" fill="#fff0c4" opacity=".95" r="18"></circle>
+                                   <path d="M0 78 L70 56 L130 74 L210 48 L300 76 V130 H0Z" fill="#8c9a7a"></path>
+                                   <rect fill="#6d9a3a" height="34" width="300" y="96"></rect>
+                                   <path d="M180 100 h70 v-4 h-70z M186 96 v-18 M244 96 v-18" fill="none"
+                                        stroke="#3b2f22" stroke-width="3"></path>
+                                   <rect fill="#4a3a2a" height="6" width="76" x="178" y="72"></rect>
+                                   <path d="M250 40 q-26 6-24 36 h4 q-2-22 20-30z" fill="#2d4a22"></path>
+                                   <rect fill="#3b2f22" height="56" width="5" x="262" y="40"></rect>
+                                   <circle cx="264" cy="30" fill="#2d4a22" r="22"></circle>
+                              </svg>
+                              <span class="iv-badge"><svg viewbox="0 0 24 24">
+                                        <path
+                                             d="M17 8C8 10 5.9 16.2 3.8 21.3L5.7 22c.7-1.6 1.4-3 2.4-4.2 5.4 1.8 11.9-1.3 12.9-13.8-1.3.5-2.8 1.5-4 4z">
+                                        </path>
+                                   </svg>3250 SQ.FT</span>
+                         </div>
+                         <h3>3250 SQ.FT</h3>
+                         <p class="iv-tag">Balanced space<br />premium living</p>
+                         <div class="iv-price-row">
+                              <div><small>Starting Price</small><strong>₹55 Lakhs*</strong></div>
+                              <button aria-label="View 3250 sq.ft details" class="iv-go"><svg fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2.2" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M13 6l6 6-6 6"></path>
+                                   </svg></button>
+                         </div>
+                    </article>
+                    <article class="iv-card">
+                         <div class="iv-thumb">
+                              <svg aria-hidden="true" preserveaspectratio="xMidYMid slice" viewbox="0 0 300 130">
+                                   <defs>
+                                        <lineargradient id="ivg3" x1="0" x2="0" y1="0" y2="1">
+                                             <stop offset="0" stop-color="#f1b377"></stop>
+                                             <stop offset="1" stop-color="#e6d6b8"></stop>
+                                        </lineargradient>
+                                   </defs>
+                                   <rect fill="url(#ivg3)" height="130" width="300"></rect>
+                                   <path d="M0 74 L60 46 L120 68 L190 40 L260 66 L300 54 V130 H0Z" fill="#7f9490">
+                                   </path>
+                                   <path d="M0 88 L80 68 L170 86 L300 66 V130 H0Z" fill="#6a8a58"></path>
+                                   <path d="M0 98 H300 V130 H0Z" fill="#cdbf9f"></path>
+                                   <path d="M0 102 Q150 92 300 102 V130 H0Z" fill="#6fa8c4"></path>
+                                   <rect fill="#4d4338" height="8" rx="3" width="60" x="190" y="88"></rect>
+                                   <rect fill="#6b5e4e" height="7" rx="3" width="22" x="196" y="82"></rect>
+                                   <rect fill="#3b2f22" height="60" width="5" x="258" y="38"></rect>
+                                   <circle cx="262" cy="30" fill="#2d4a22" r="24"></circle>
+                              </svg>
+                              <span class="iv-badge"><svg viewbox="0 0 24 24">
+                                        <path
+                                             d="M17 8C8 10 5.9 16.2 3.8 21.3L5.7 22c.7-1.6 1.4-3 2.4-4.2 5.4 1.8 11.9-1.3 12.9-13.8-1.3.5-2.8 1.5-4 4z">
+                                        </path>
+                                   </svg>3600 SQ.FT</span>
+                         </div>
+                         <h3>3600 SQ.FT</h3>
+                         <p class="iv-tag">Designed for<br />bigger dreams</p>
+                         <div class="iv-price-row">
+                              <div><small>Starting Price</small><strong>₹61 Lakhs*</strong></div>
+                              <button aria-label="View 3600 sq.ft details" class="iv-go"><svg fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2.2" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M13 6l6 6-6 6"></path>
+                                   </svg></button>
+                         </div>
+                    </article>
+                    <article class="iv-card">
+                         <div class="iv-thumb">
+                              <svg aria-hidden="true" preserveaspectratio="xMidYMid slice" viewbox="0 0 300 130">
+                                   <defs>
+                                        <lineargradient id="ivg4" x1="0" x2="0" y1="0" y2="1">
+                                             <stop offset="0" stop-color="#f0b97a"></stop>
+                                             <stop offset="1" stop-color="#e3d3b4"></stop>
+                                        </lineargradient>
+                                   </defs>
+                                   <rect fill="url(#ivg4)" height="130" width="300"></rect>
+                                   <path d="M0 82 L80 52 L150 76 L230 56 L300 78 V130 H0Z" fill="#8e9a80"></path>
+                                   <path d="M0 96 Q100 80 200 96 T300 90 V130 H0Z" fill="#5f7a43"></path>
+                                   <rect fill="#2c2a26" height="86" width="150" x="150" y="30"></rect>
+                                   <rect fill="#1a1917" height="8" width="150" x="150" y="30"></rect>
+                                   <rect fill="#e9b777" height="52" opacity=".55" width="130" x="160" y="44"></rect>
+                                   <rect fill="#c9a77f" height="34" width="150" x="150" y="96"></rect>
+                                   <rect fill="#4d4338" height="8" rx="3" width="40" x="190" y="100"></rect>
+                                   <circle cx="60" cy="40" fill="#2d4a22" r="22"></circle>
+                                   <rect fill="#3b2f22" height="50" width="4" x="58" y="44"></rect>
+                              </svg>
+                              <span class="iv-badge"><svg viewbox="0 0 24 24">
+                                        <path
+                                             d="M17 8C8 10 5.9 16.2 3.8 21.3L5.7 22c.7-1.6 1.4-3 2.4-4.2 5.4 1.8 11.9-1.3 12.9-13.8-1.3.5-2.8 1.5-4 4z">
+                                        </path>
+                                   </svg>5000 SQ.FT</span>
+                         </div>
+                         <h3>5000 SQ.FT</h3>
+                         <p class="iv-tag">Luxury with<br />more freedom</p>
+                         <div class="iv-price-row">
+                              <div><small>Starting Price</small><strong>₹85 Lakhs*</strong></div>
+                              <button aria-label="View 5000 sq.ft details" class="iv-go"><svg fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2.2" viewbox="0 0 24 24">
+                                        <path d="M5 12h14M13 6l6 6-6 6"></path>
+                                   </svg></button>
+                         </div>
+                    </article>
+               </div>
+               <!-- Financing partners -->
+               <div class="iv-banks">
+                    <div class="iv-banks-title">
+                         <div class="iv-bank-ico">
+                              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                   stroke-width="1.8" viewbox="0 0 24 24">
+                                   <path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18"></path>
+                              </svg>
+                         </div>
+                         <div>
+                              <small>FINANCING PARTNERS</small>
+                              <strong>Trusted Banks</strong>
+                              <span>Easy home loan support from leading banks.</span>
+                         </div>
+                    </div>
+                    <!-- ✅ BANK LOGO IMAGES: All six bank logos now use standard image links. Replace the src with your own logo URLs. -->
+                    <div class="iv-logos">
+                         <a aria-label="SBI" class="iv-logo" href="#"><img alt="SBI"
+                                   src="https://via.placeholder.com/140x60/ffffff/1b2a1f?text=SBI" /></a>
+                         <a aria-label="HDFC Bank" class="iv-logo" href="#"><img alt="HDFC Bank"
+                                   src="https://via.placeholder.com/140x60/ffffff/1b2a1f?text=HDFC" /></a>
+                         <a aria-label="ICICI Bank" class="iv-logo" href="#"><img alt="ICICI Bank"
+                                   src="https://via.placeholder.com/140x60/ffffff/1b2a1f?text=ICICI" /></a>
+                         <a aria-label="Axis Bank" class="iv-logo" href="#"><img alt="Axis Bank"
+                                   src="https://via.placeholder.com/140x60/ffffff/1b2a1f?text=Axis" /></a>
+                         <a aria-label="Bank of Baroda" class="iv-logo" href="#"><img alt="Bank of Baroda"
+                                   src="https://via.placeholder.com/140x60/ffffff/1b2a1f?text=BOB" /></a>
+                         <a aria-label="Punjab National Bank" class="iv-logo" href="#"><img alt="Punjab National Bank"
+                                   src="https://via.placeholder.com/140x60/ffffff/1b2a1f?text=PNB" /></a>
+                    </div>
+               </div>
+          </section>
+     </div>
+     <!-- =====================================================================
+     7b) CONTACT FORM
+     ===================================================================== -->
+     <div class="s9">
+          <section class="shc-wrap" id="sh-contact">
+               <div class="shc-inner">
+                    <div>
+                         <h2 class="shc-title">Talk to our <span>team</span></h2>
+                         <p class="shc-lead">Feel free to reach out for help with your plot enquiry, site visit or any
+                              questions about Seven Hills Wai.</p>
+                         <ul class="shc-info">
+                              <li>
+                                   <span class="shc-ico"><svg viewbox="0 0 24 24">
+                                             <rect height="14" rx="2" width="18" x="3" y="5"></rect>
+                                             <path d="m3.5 7 8.5 6 8.5-6"></path>
+                                        </svg></span>
+                                   <a href="mailto:info@yourdomain.com">info@yourdomain.com</a>
+                              </li>
+                              <li>
+                                   <span class="shc-ico"><svg viewbox="0 0 24 24">
+                                             <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"></path>
+                                             <circle cx="12" cy="10" r="2.5"></circle>
+                                        </svg></span>
+                                   <span>Seven Hills Wai, Satara, Maharashtra</span>
+                              </li>
+                              <li>
+                                   <span class="shc-ico"><svg viewbox="0 0 24 24">
+                                             <path
+                                                  d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z">
+                                             </path>
+                                        </svg></span>
+                                   <a href="tel:+919032286663">+91 90322 86663</a>
+                              </li>
+                         </ul>
+                    </div>
+                    <form class="shc-form" id="shc-form" novalidate="">
+                         <div class="shc-field">
+                              <label for="shc-name">Full Name</label>
+                              <input autocomplete="name" id="shc-name" name="name" placeholder="Enter Your Full Name"
+                                   required="" type="text" />
+                         </div>
+                         <div class="shc-field">
+                              <label for="shc-email">Email Address</label>
+                              <input autocomplete="email" id="shc-email" name="email"
+                                   placeholder="Enter Your Email Address" required="" type="email" />
+                         </div>
+                         <div class="shc-field">
+                              <label for="shc-phone">Phone Number</label>
+                              <input autocomplete="tel" id="shc-phone" inputmode="tel" name="phone"
+                                   placeholder="Enter Your Phone Number" required="" type="tel" />
+                         </div>
+                         <div class="shc-field">
+                              <label for="shc-msg">Message</label>
+                              <textarea id="shc-msg" name="message" placeholder="Write Your Message Here"></textarea>
+                         </div>
+                         <button class="shc-btn" type="submit">
+                              Send Message
+                              <svg viewbox="0 0 24 24">
+                                   <path d="M5 12h14M13 6l6 6-6 6"></path>
+                              </svg>
+                         </button>
+                         <div aria-live="polite" class="shc-status" id="shc-status" role="status"></div>
+                    </form>
+               </div>
+          </section>
+     </div>
+     <!-- =====================================================================
+     SCRIPTS
+     ===================================================================== -->
+     <!-- 2) Nature attractions carousel -->
+
+     <!-- 3) Location satellite map -->
+
+     <!-- 4) Amenities (GSAP) -->
+
+     <!-- 5) Legal & Security: hover/click highlight -->
+
+     <!-- 6) OTHER NA PROJECTS (comparison) -->
+
+     <!-- 7) BANKING TIE-UPS -->
+
+     <!-- 7b) Contact form -->
+
+     <script src="script.js"></script>
+</body>
+
+</html>
